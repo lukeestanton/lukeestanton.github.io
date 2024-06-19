@@ -32,17 +32,16 @@
   }
   
   /* About section */
-#about {
+  #about {
     background-color: #28344b;
     padding: 50px 0;
     position: relative;
-    margin-top: 30px;
   }
   
   #about:before {
     content: "";
     position: absolute;
-    top: -30px;
+    top: 0;
     left: 20px;
     width: 150px;
     height: 30px;
@@ -70,13 +69,12 @@
     background-color: #647487;
     padding: 50px 0;
     position: relative;
-    margin-top: 30px;
   }
   
   #projects:before {
     content: "";
     position: absolute;
-    top: -30px;
+    top: 0;
     left: 20px;
     width: 150px;
     height: 30px;
@@ -89,13 +87,12 @@
     background-color: #9C8E7E;
     padding: 50px 0;
     position: relative;
-    margin-top: 30px;
   }
   
   #contact:before {
     content: "";
     position: absolute;
-    top: -30px;
+    top: 0;
     left: 20px;
     width: 150px;
     height: 30px;
@@ -109,6 +106,7 @@
     font-size: 1.2em;
     text-align: center;
     padding: 50px;
+    margin-top: -4px; /* Ensure the footer connects with the previous section */
   }
   
   /* Title Styles */
@@ -151,7 +149,4 @@
     line-height: 1.5em;
     margin-bottom: 10px;
   }
-
-
-  
   
