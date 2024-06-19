@@ -30,7 +30,6 @@
     background: url(/Users/lukestanton/Downloads/FramesDonut/0159.png) no-repeat center top fixed;
     background-size: cover;
     text-align: center;
-    overflow: hidden;
   }
   
   .swirls {
@@ -45,9 +44,6 @@
   path {
     opacity: 0.5;
   }
-  
-  
-  
   
   #introduction {
     background-color: #28344b;
