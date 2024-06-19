@@ -1,15 +1,141 @@
-/* Splash section styling */
-#splash {
+/* Container Styles */
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .grid-item {
+    background-color: #2c3e50;
+    padding: 20px;
+    font-size: .8em;
+    text-align: left;
+    border: 1px solid #333;
+    border-radius: 4px;
+  }
+  
+  /* Section Styles */
+  #splash {
     position: relative;
     background-color: #FFFFFF;
     height: 800px;
     background: url(/Users/lukestanton/Downloads/FramesDonut/0159.png) no-repeat center top fixed;
     background-size: cover;
     text-align: center;
-    overflow: hidden;
   }
   
-  /* Title styling */
+  .swirls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  path {
+    opacity: 0.5;
+  }
+  
+  #introduction {
+    background-color: #28344b;
+    padding: 50px 0;
+  }
+  
+  #introduction img.right {
+    float: right;
+    max-width: 35%;
+    margin: 20px;
+  }
+  
+  #introduction blockquote {
+    margin: 20px 0; 
+    padding: 20px;
+    background-color: #2b3a52;
+    border-left: 5px solid #FCCB05; 
+    color: #ffffff;
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.8;
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-top: 2px solid #000000;
+  }
+  
+  #filmography {
+    background-color: #647487; 
+    padding: 50px 0;
+  }
+  
+  #impact {
+    background-color: #9C8E7E;
+    padding: 50px 0;
+  }
+  
+  #impact img.right {
+    float: right;
+    max-width: 35%;
+    margin: 20px;
+  }
+  
+  #footer {
+    background-color: #1A2232;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  /* Navigation Styles */
+  nav {
+    background-color: rgba(10, 14, 21, 0.95);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    overflow: hidden;
+    border-bottom: 1px solid #FCCB05;
+  } 
+  
+  ul#menu {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    line-height: 75px;
+  } 
+  
+  ul#menu li {
+    list-style: none;
+    display: inline;
+    padding: 0 15px;
+  } 
+  
+  ul#menu li a.button {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 30px;
+    display: inline-block;
+    line-height: 75px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  ul#menu li a.button:hover {
+    color: #1A2232;
+    background-color: #FCCB05;
+  }
+  
+  /* Title Styles */
   #title {
     width: 100%;
     padding-top: 250px;
@@ -36,7 +162,7 @@
     margin: 0;
     padding: 0;
     color: #FFFFFF;
-    font-family: 'Oswald', arial, sans-serif;
+    font-family: 'Oswald', arial, sans-serif; 
     letter-spacing: 2.2px;
   }
   
@@ -74,3 +200,23 @@
     margin-bottom: 10px;
   }
   
+  /* Table styles */
+  table {
+    border: solid #7094DB 1px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  td {
+    padding: 15px;
+    border: solid #7094DB 1px;
+    margin: 0;
+  }
+  
+  th {
+    font-weight: bold;
+    color: #FCCB05;
+    background-color: #28344b;
+    text-align: center
+  }
