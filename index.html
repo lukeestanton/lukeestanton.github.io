@@ -1,104 +1,82 @@
-
 <!DOCTYPE html>
 <html>
-   <head>
-     <meta charset="UTF-8">
-     <meta name="author" content="Luke Stanton">
-     <meta name="keywords" content="Website Design, Blender, Animation">
-     <title>Luke Stanton</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap" rel="stylesheet">
-     <link href="style.css" rel="stylesheet" type="text/css">
-     <link href="responsive.css" rel="stylesheet" type="text/css">
-     <link rel="shortcut icon" href="favicon.ico"> 
-     <link rel="stylesheet" type="text/css" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
-     <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-   </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Luke Stanton">
+  <meta name="keywords" content="Website Design, Blender, Animation">
+  <title>Luke Stanton</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="responsive.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico"> 
+</head>
 
-  <body>
-     <section id="splash">
+<body>
+  <section id="splash">
+    <nav>
+      <div class="container">
+        <ul id="menu">
+          <li><a href="#projects" class="button">Projects</a></li>
+          <li><a href="#animation" class="button">VFX</a></li>
+          <li><a href="#contact" class="button">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="title">
+      <div class="container">
+        <h1>Hi <br> My Name is Luke </h1>
+      </div>
+    </div>
+    <div class="swirls">
+      <svg width="100%" height="100%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 100 Q75 50, 100 100 T150 100" stroke="#1E90FF" stroke-width="2" fill="none">
+          <animate attributeName="stroke-dasharray" from="0,200" to="200,0" dur="2s" repeatCount="indefinite"/>
+        </path>
+        <path d="M50 100 Q75 150, 100 100 T150 100" stroke="#1E90FF" stroke-width="2" fill="none">
+          <animate attributeName="stroke-dasharray" from="0,200" to="200,0" dur="2.5s" repeatCount="indefinite"/>
+        </path>
+      </svg>
+    </div>
+  </section>
 
-        <nav>
-            <div class="container">
-                <ul id="menu"> <!-- creating navigation menu with unordered list -->
-                    <li><a href="#projects" class="button">Projects</a></li>
-                    <li><a href="#animation" class="button">VFX</a></li>
-                    <li><a href="#contact" class="button">Contact</a></li>
-                </ul>
-            </div> <!-- end container div -->
-        </nav> <!-- end navigation -->
+  <section id="introduction">
+    <div class="container">
+      <h2>About</h2>
+    </div>
+  </section>
 
-        <div id="title">
-            <div class="container">
-    
-              <h1>Hi, <br> My Name is Luke </h1>
+  <section id="filmography">
+    <div class="container">
+      <h2>Projects</h2>
+      <br>
+    </div>
+  </section>
 
-    
-            </div> <!-- End container div -->
-          </div> <!-- End title div -->
+  <section id="impact">
+    <div class="container">
+      <h2>VFX</h2>
+    </div>
+  </section>
 
-     </section> <!-- End splash section -->
+  <section id="footer">
+    <div class="container">
+      <p>&copy; Luke Stanton 2024 </p>
+    </div>
+  </section>
 
-     <section id="introduction">
-
-        <div class="container">
-
-            <h2>About</h2>
-        
-  
-        </div> <!-- End container div -->
-
-     </section> <!-- End introduction section -->
-
-     
-
-     <section id="filmography">
-
-        <div class="container">
-
-            <h2>Projects</h2>
-            
-    <br>
-
-    
-        </div> <!-- End container div -->
-
-     </section> <!-- End filmography section -->
-
-     <section id="impact">
-
-        <div class="container">
-
-            <h2>VFX</h2>
-  
-        </div> <!-- End container div -->
-        
-
-     </section> <!-- End impact section -->
-
-     <section id="footer">
-        <div class="container">
-
-            <p>&copy; Luke Stanton 2024 </p>
-          
-        </div> <!-- end container div -->
-
-     </section> <!-- end footer section -->
-
-     <script src="jquery.js"></script>
-     <script type="text/javascript">
-     jQuery(document).ready(function () {
-          jQuery('.button').click(function() {
-               targetName = jQuery(this).attr('href');
-               targetLocation = jQuery(targetName).offset().top;
-               jQuery('html, body').animate({scrollTop:targetLocation}, 'slow');
-               return false;
-               });
-          });
-</script>
-
-  </body>
-
+  <script src="jquery.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function () {
+      jQuery('.button').click(function() {
+        targetName = jQuery(this).attr('href');
+        targetLocation = jQuery(targetName).offset().top;
+        jQuery('html, body').animate({scrollTop:targetLocation}, 'slow');
+        return false;
+      });
+    });
+  </script>
+</body>
 </html>
