@@ -44,17 +44,17 @@
     opacity: 0.5;
   }
   
-  #introduction {
+  #about {
     background-color: #28344b;
     padding: 50px 0;
   }
   
-  #filmography {
+  #projects {
     background-color: #647487; 
     padding: 50px 0;
   }
   
-  #impact {
+  #contact {
     background-color: #9C8E7E;
     padding: 50px 0;
   }
@@ -79,6 +79,7 @@
   
   #title h1 {
     font-size: 4.4em;
+    color: #28344b
   }
   
   #title h2 {
