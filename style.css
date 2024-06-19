@@ -32,9 +32,22 @@
   }
   
   /* About section */
-  #about {
+#about {
     background-color: #28344b;
     padding: 50px 0;
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  #about:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    width: 150px;
+    height: 30px;
+    background-color: #28344b;
+    border-radius: 5px 5px 0 0;
   }
   
   #about h2, #projects h2, #contact h2 {
@@ -56,12 +69,38 @@
   #projects {
     background-color: #647487;
     padding: 50px 0;
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  #projects:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    width: 150px;
+    height: 30px;
+    background-color: #647487;
+    border-radius: 5px 5px 0 0;
   }
   
   /* Contact section */
   #contact {
     background-color: #9C8E7E;
     padding: 50px 0;
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  #contact:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    width: 150px;
+    height: 30px;
+    background-color: #9C8E7E;
+    border-radius: 5px 5px 0 0;
   }
   
   /* Footer Styles */
