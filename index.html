@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Metadata and linking external resources -->
   <meta charset="UTF-8">
   <meta name="author" content="Luke Stanton">
   <meta name="keywords" content="Website Design, Blender, Animation">
@@ -14,7 +15,8 @@
   <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
-  <header>
+  <!-- Splash section with navigation and title -->
+  <section id="splash">
     <nav>
       <div class="container">
         <ul id="menu">
@@ -24,56 +26,58 @@
         </ul>
       </div>
     </nav>
-  </header>
-
-  <main>
-    <section id="splash">
-      <div id="title">
-        <div class="container">
-          <h1>Hi <br> My Name is Luke </h1>
-        </div>
-      </div>
-      <div class="shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-        <div class="shape shape-4"></div>
-        <div class="shape shape-5"></div>
-      </div>
-    </section>
-
-    <section id="introduction">
+    <div id="title">
       <div class="container">
-        <h2>About</h2>
+        <h1>Hi <br> My Name is Luke </h1>
       </div>
-    </section>
+    </div>
+    <!-- Decorative shapes -->
+    <div class="shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+  </section>
 
-    <section id="filmography">
-      <div class="container">
-        <h2>Projects</h2>
-      </div>
-    </section>
+  <!-- Introduction section -->
+  <section id="introduction">
+    <div class="container">
+      <h2>About</h2>
+    </div>
+  </section>
 
-    <section id="impact">
-      <div class="container">
-        <h2>VFX</h2>
-      </div>
-    </section>
-  </main>
+  <!-- Filmography section -->
+  <section id="filmography">
+    <div class="container">
+      <h2>Projects</h2>
+      <br>
+    </div>
+  </section>
 
-  <footer id="footer">
+  <!-- VFX section -->
+  <section id="impact">
+    <div class="container">
+      <h2>VFX</h2>
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <section id="footer">
     <div class="container">
       <p>&copy; Luke Stanton 2024 </p>
     </div>
-  </footer>
+  </section>
 
+  <!-- JavaScript for smooth scrolling -->
   <script src="jquery.js"></script>
   <script type="text/javascript">
     jQuery(document).ready(function () {
       jQuery('.button').click(function() {
-        const targetName = jQuery(this).attr('href');
-        const targetLocation = jQuery(targetName).offset().top;
-        jQuery('html, body').animate({scrollTop: targetLocation}, 'slow');
+        targetName = jQuery(this).attr('href');
+        targetLocation = jQuery(targetName).offset().top;
+        jQuery('html, body').animate({scrollTop:targetLocation}, 'slow');
         return false;
       });
     });
