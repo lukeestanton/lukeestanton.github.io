@@ -26,13 +26,7 @@
 
 /* Section Styles */
 
-#splash {
-    background-color:#FFFFFF;
-    height: 800px;
-    background: url(/Users/lukestanton/Downloads/FramesDonut/0159.png) no-repeat center top fixed;
-    background-size: cover;
-    text-align: center;
-}
+
 
 #introduction {
      background-color:#28344b;
@@ -231,3 +225,27 @@ a:link, a:visited {
 a:hover {
     color: #8CC0A7;
 }
+
+
+#splash {
+    position: relative;
+    background-color: #FFFFFF;
+    height: 800px;
+    background: url(/Users/lukestanton/Downloads/FramesDonut/0159.png) no-repeat center top fixed;
+    background-size: cover;
+    text-align: center;
+  }
+  
+  .swirls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevents interference with other elements */
+  }
+  
+  path {
+    opacity: 0.5;
+  }
+  
