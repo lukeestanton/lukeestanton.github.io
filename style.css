@@ -1,5 +1,29 @@
-/* Splash section styling */
-#splash {
+/* Container Styles */
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .grid-item {
+    background-color: #2c3e50;
+    padding: 20px;
+    font-size: .8em;
+    text-align: left;
+    border: 1px solid #333;
+    border-radius: 4px;
+  }
+  
+  /* Section Styles */
+  #splash {
     position: relative;
     background-color: #FFFFFF;
     height: 800px;
@@ -9,8 +33,7 @@
     overflow: hidden;
   }
   
-  /* Decorative shapes styling */
-  .shapes {
+  .swirls {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,68 +42,104 @@
     pointer-events: none;
   }
   
-  .shape {
-    position: absolute;
-    background: rgba(30, 144, 255, 0.5);
-    border-radius: 50%;
-    opacity: 0.7;
-    animation: float 10s infinite ease-in-out;
+  path {
+    opacity: 0.5;
   }
   
-  .shape-1 {
-    width: 60px;
-    height: 60px;
-    top: 20%;
-    left: 25%;
-    animation-duration: 8s;
+  
+  
+  
+  #introduction {
+    background-color: #28344b;
+    padding: 50px 0;
   }
   
-  .shape-2 {
-    width: 100px;
-    height: 100px;
-    top: 60%;
-    left: 75%;
-    animation-duration: 10s;
+  #introduction img.right {
+    float: right;
+    max-width: 35%;
+    margin: 20px;
   }
   
-  .shape-3 {
-    width: 80px;
-    height: 80px;
-    top: 40%;
-    left: 50%;
-    animation-duration: 12s;
+  #introduction blockquote {
+    margin: 20px 0; 
+    padding: 20px;
+    background-color: #2b3a52;
+    border-left: 5px solid #FCCB05; 
+    color: #ffffff;
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.8;
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-top: 2px solid #000000;
   }
   
-  .shape-4 {
-    width: 120px;
-    height: 120px;
-    top: 70%;
-    left: 15%;
-    animation-duration: 14s;
+  #filmography {
+    background-color: #647487; 
+    padding: 50px 0;
   }
   
-  .shape-5 {
-    width: 50px;
-    height: 50px;
-    top: 30%;
-    left: 85%;
-    animation-duration: 9s;
+  #impact {
+    background-color: #9C8E7E;
+    padding: 50px 0;
   }
   
-  /* Animation for floating shapes */
-  @keyframes float {
-    0% {
-      transform: translateY(0) rotate(0deg);
-    }
-    50% {
-      transform: translateY(-20px) rotate(180deg);
-    }
-    100% {
-      transform: translateY(0) rotate(360deg);
-    }
+  #impact img.right {
+    float: right;
+    max-width: 35%;
+    margin: 20px;
   }
   
-  /* Title styling */
+  #footer {
+    background-color: #1A2232;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  /* Navigation Styles */
+  nav {
+    background-color: rgba(10, 14, 21, 0.95);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    overflow: hidden;
+    border-bottom: 1px solid #FCCB05;
+  } 
+  
+  ul#menu {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    line-height: 75px;
+  } 
+  
+  ul#menu li {
+    list-style: none;
+    display: inline;
+    padding: 0 15px;
+  } 
+  
+  ul#menu li a.button {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 30px;
+    display: inline-block;
+    line-height: 75px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  ul#menu li a.button:hover {
+    color: #1A2232;
+    background-color: #FCCB05;
+  }
+  
+  /* Title Styles */
   #title {
     width: 100%;
     padding-top: 250px;
@@ -107,7 +166,7 @@
     margin: 0;
     padding: 0;
     color: #FFFFFF;
-    font-family: 'Oswald', arial, sans-serif;
+    font-family: 'Oswald', arial, sans-serif; 
     letter-spacing: 2.2px;
   }
   
@@ -143,5 +202,26 @@
     font-size: 1.1em;
     line-height: 1.5em;
     margin-bottom: 10px;
+  }
+  
+  /* Table styles */
+  table {
+    border: solid #7094DB 1px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  td {
+    padding: 15px;
+    border: solid #7094DB 1px;
+    margin: 0;
+  }
+  
+  th {
+    font-weight: bold;
+    color: #FCCB05;
+    background-color: #28344b;
+    text-align: center
   }
   
