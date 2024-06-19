@@ -1,8 +1,0 @@
-<svg width="100%" height="100%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <path d="M50 100 Q75 50, 100 100 T150 100" stroke="#1E90FF" stroke-width="2" fill="none">
-    <animate attributeName="stroke-dasharray" from="0,200" to="200,0" dur="2s" repeatCount="indefinite"/>
-  </path>
-  <path d="M50 100 Q75 150, 100 100 T150 100" stroke="#1E90FF" stroke-width="2" fill="none">
-    <animate attributeName="stroke-dasharray" from="0,200" to="200,0" dur="2.5s" repeatCount="indefinite"/>
-  </path>
-</svg>
