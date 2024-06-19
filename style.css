@@ -45,18 +45,18 @@
     opacity: 0.5;
   }
   
-  #introduction {
+  #about {
     background-color: #28344b;
     padding: 50px 0;
   }
   
-  #introduction img.right {
+  #about img.right {
     float: right;
     max-width: 35%;
     margin: 20px;
   }
   
-  #introduction blockquote {
+  #about blockquote {
     margin: 20px 0; 
     padding: 20px;
     background-color: #2b3a52;
@@ -70,17 +70,17 @@
     border-top: 2px solid #000000;
   }
   
-  #filmography {
+  #projects {
     background-color: #647487; 
     padding: 50px 0;
   }
   
-  #impact {
+  #contact {
     background-color: #9C8E7E;
     padding: 50px 0;
   }
   
-  #impact img.right {
+  #contact img.right {
     float: right;
     max-width: 35%;
     margin: 20px;
