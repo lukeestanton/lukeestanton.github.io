@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var timelineData = {
         "title": {
             "text": {
-                "headline": "My Blender Progress",
+                "headline": "My VFX Progress",
                 "text": "A journey through my Blender projects from start to finish."
             }
         },
