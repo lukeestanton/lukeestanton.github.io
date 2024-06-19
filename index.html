@@ -14,7 +14,7 @@
   <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
-  <section id="splash">
+  <header>
     <nav>
       <div class="container">
         <ul id="menu">
@@ -24,57 +24,59 @@
         </ul>
       </div>
     </nav>
-    <div id="title">
-      <div class="container">
-        <h1>Hi <br> My Name is Luke </h1>
+  </header>
+
+  <main>
+    <section id="splash">
+      <div id="title">
+        <div class="container">
+          <h1>Hi <br> My Name is Luke </h1>
+        </div>
       </div>
-    </div>
-    <div class="shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-      <div class="shape shape-4"></div>
-      <div class="shape shape-5"></div>
-    </div>
-  </section>
+      <div class="shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+      </div>
+    </section>
 
-  <section id="introduction">
-    <div class="container">
-      <h2>About</h2>
-    </div>
-  </section>
+    <section id="introduction">
+      <div class="container">
+        <h2>About</h2>
+      </div>
+    </section>
 
-  <section id="filmography">
-    <div class="container">
-      <h2>Projects</h2>
-      <br>
-    </div>
-  </section>
+    <section id="filmography">
+      <div class="container">
+        <h2>Projects</h2>
+      </div>
+    </section>
 
-  <section id="impact">
-    <div class="container">
-      <h2>VFX</h2>
-    </div>
-  </section>
+    <section id="impact">
+      <div class="container">
+        <h2>VFX</h2>
+      </div>
+    </section>
+  </main>
 
-  <section id="footer">
+  <footer id="footer">
     <div class="container">
       <p>&copy; Luke Stanton 2024 </p>
     </div>
-  </section>
+  </footer>
 
   <script src="jquery.js"></script>
   <script type="text/javascript">
     jQuery(document).ready(function () {
       jQuery('.button').click(function() {
-        targetName = jQuery(this).attr('href');
-        targetLocation = jQuery(targetName).offset().top;
-        jQuery('html, body').animate({scrollTop:targetLocation}, 'slow');
+        const targetName = jQuery(this).attr('href');
+        const targetLocation = jQuery(targetName).offset().top;
+        jQuery('html, body').animate({scrollTop: targetLocation}, 'slow');
         return false;
       });
     });
   </script>
 </body>
 </html>
-
-
