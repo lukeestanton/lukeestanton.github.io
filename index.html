@@ -30,25 +30,68 @@
       </div>
     </div>
     <div class="swirls">
-        <svg width="100%" height="100%" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 100 Q75 50, 100 100 T150 100" stroke="#2b3a52" stroke-width="3" fill="none">
-            <animate attributeName="stroke-dasharray" from="0,400" to="400,0" dur="2s" repeatCount="indefinite"/>
-            <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="360 50 50" dur="20s" repeatCount="indefinite"/>
+        <svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+          <!-- Define Motion Paths -->
+          <path id="motionPath1" d="M0,100 L100,0 L200,100 L100,200 Z" fill="none" />
+          <path id="motionPath2" d="M0,200 L200,0 L400,200 L200,400 Z" fill="none" />
+          <path id="motionPath3" d="M0,300 L300,0 L600,300 L300,600 Z" fill="none" />
+          <path id="motionPath4" d="M0,400 L400,0 L800,400 L400,800 Z" fill="none" />
+          <path id="motionPath5" d="M100,700 L700,100 L800,200 L200,800 Z" fill="none" />
+          <path id="motionPath6" d="M100,600 L600,100 L700,200 L200,700 Z" fill="none" />
+          <path id="motionPath7" d="M200,500 L500,200 L600,300 L300,600 Z" fill="none" />
+          <path id="motionPath8" d="M300,400 L400,300 L500,400 L400,500 Z" fill="none" />
+      
+          <!-- Swirl 1 -->
+          <path d="M100 200 Q150 100, 200 200 T300 200" stroke="#2b3a52" stroke-width="3" fill="none">
+            <animateMotion dur="5s" repeatCount="indefinite" keyTimes="0;0.5;1" keySplines=".42,0,.58,1;.42,0,.58,1">
+              <mpath xlink:href="#motionPath1" />
+            </animateMotion>
           </path>
-          <path d="M200 50 Q250 100, 300 50 T350 50" stroke="#FCCB05" stroke-width="2" fill="none">
-            <animate attributeName="stroke-dasharray" from="0,400" to="400,0" dur="2.5s" repeatCount="indefinite"/>
-            <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 200 50" to="360 200 50" dur="25s" repeatCount="indefinite"/>
+          <!-- Swirl 2 -->
+          <path d="M200 300 Q250 400, 300 300 T400 300" stroke="#1E90FF" stroke-width="2" fill="none">
+            <animateMotion dur="5s" repeatCount="indefinite" keyTimes="0;0.5;1" keySplines=".42,0,.58,1;.42,0,.58,1">
+              <mpath xlink:href="#motionPath2" />
+            </animateMotion>
           </path>
-          <path d="M300 200 Q350 250, 300 300 T300 350" stroke="#2b3a52" stroke-width="2" fill="none">
-            <animate attributeName="stroke-dasharray" from="0,400" to="400,0" dur="3s" repeatCount="indefinite"/>
-            <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 300 200" to="360 300 200" dur="15s" repeatCount="indefinite"/>
+          <!-- Swirl 3 -->
+          <path d="M300 400 Q350 500, 400 400 T500 400" stroke="#2b3a52" stroke-width="3" fill="none">
+            <animateMotion dur="5s" repeatCount="indefinite" keyTimes="0;0.5;1" keySplines=".42,0,.58,1;.42,0,.58,1">
+              <mpath xlink:href="#motionPath3" />
+            </animateMotion>
           </path>
-          <path d="M100 300 Q50 350, 100 300 T200 300" stroke="#FCCB05" stroke-width="3" fill="none">
-            <animate attributeName="stroke-dasharray" from="0,400" to="400,0" dur="3.5s" repeatCount="indefinite"/>
-            <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 100 300" to="360 100 300" dur="30s" repeatCount="indefinite"/>
+          <!-- Swirl 4 -->
+          <path d="M400 500 Q450 600, 500 500 T600 500" stroke="#1E90FF" stroke-width="2" fill="none">
+            <animateMotion dur="5s" repeatCount="indefinite" keyTimes="0;0.5;1" keySplines=".42,0,.58,1;.42,0,.58,1">
+              <mpath xlink:href="#motionPath4" />
+            </animateMotion>
+          </path>
+          <!-- Swirl 5 -->
+          <path d="M500 600 Q550 700, 600 600 T700 600" stroke="#2b3a52" stroke-width="3" fill="none">
+            <animateMotion dur="5s" repeatCount="indefinite" keyTimes="0;0.5;1" keySplines=".42,0,.58,1;.42,0,.58,1">
+              <mpath xlink:href="#motionPath5" />
+            </animateMotion>
+          </path>
+          <!-- Swirl 6 -->
+          <path d="M600 700 Q650 800, 700 700 T800 700" stroke="#1E90FF" stroke-width="2" fill="none">
+            <animateMotion dur="5s" repeatCount="indefinite" keyTimes="0;0.5;1" keySplines=".42,0,.58,1;.42,0,.58,1">
+              <mpath xlink:href="#motionPath6" />
+            </animateMotion>
+          </path>
+          <!-- Swirl 7 -->
+          <path d="M700 800 Q750 900, 800 800 T900 800" stroke="#2b3a52" stroke-width="3" fill="none">
+            <animateMotion dur="5s" repeatCount="indefinite" keyTimes="0;0.5;1" keySplines=".42,0,.58,1;.42,0,.58,1">
+              <mpath xlink:href="#motionPath7" />
+            </animateMotion>
+          </path>
+          <!-- Swirl 8 -->
+          <path d="M800 900 Q850 1000, 900 900 T1000 900" stroke="#1E90FF" stroke-width="2" fill="none">
+            <animateMotion dur="5s" repeatCount="indefinite" keyTimes="0;0.5;1" keySplines=".42,0,.58,1;.42,0,.58,1">
+              <mpath xlink:href="#motionPath8" />
+            </animateMotion>
           </path>
         </svg>
       </div>
+      
             
   </section>
 
