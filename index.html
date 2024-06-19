@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Metadata and linking external resources -->
   <meta charset="UTF-8">
   <meta name="author" content="Luke Stanton">
   <meta name="keywords" content="Website Design, Blender, Animation">
@@ -11,10 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="favicon.ico">
+  <link href="responsive.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico"> 
 </head>
 <body>
-  <!-- Splash section with navigation and title -->
   <section id="splash">
     <nav>
       <div class="container">
@@ -30,24 +29,46 @@
         <h1>Hi <br> My Name is Luke </h1>
       </div>
     </div>
-    <!-- Decorative shapes -->
-    <div class="shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-      <div class="shape shape-4"></div>
-      <div class="shape shape-5"></div>
-    </div>
+    <div class="swirls">
+        <svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" id="swirlSvg">
+          <!-- Swirl Paths -->
+          <path d="M100 200 Q150 100, 200 200 T300 200" stroke="#2b3a52" stroke-width="3" fill="none" class="swirl" />
+          <path d="M200 300 Q250 400, 300 300 T400 300" stroke="#1E90FF" stroke-width="2" fill="none" class="swirl" />
+          <path d="M300 400 Q350 500, 400 400 T500 400" stroke="#2b3a52" stroke-width="3" fill="none" class="swirl" />
+          <path d="M400 500 Q450 600, 500 500 T600 500" stroke="#1E90FF" stroke-width="2" fill="none" class="swirl" />
+          <path d="M500 600 Q550 700, 600 600 T700 600" stroke="#2b3a52" stroke-width="3" fill="none" class="swirl" />
+          <path d="M600 700 Q650 800, 700 700 T800 700" stroke="#1E90FF" stroke-width="2" fill="none" class="swirl" />
+          <path d="M700 800 Q750 900, 800 800 T900 800" stroke="#2b3a52" stroke-width="3" fill="none" class="swirl" />
+          <path d="M800 900 Q850 1000, 900 900 T1000 900" stroke="#1E90FF" stroke-width="2" fill="none" class="swirl" />
+        </svg>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const swirls = document.querySelectorAll(".swirl");
+          swirls.forEach(swirl => {
+            const pathLength = swirl.getTotalLength();
+            swirl.style.strokeDasharray = pathLength;
+            swirl.style.strokeDashoffset = pathLength;
+            swirl.setAttribute("animateTransform", "transform");
+            swirl.setAttribute("attributeType", "XML");
+            swirl.setAttribute("type", "rotate");
+            swirl.setAttribute("dur", `${Math.random() * 5 + 5}s`);
+            swirl.setAttribute("repeatCount", "indefinite");
+            swirl.setAttribute("values", `0 ${Math.random() * 800} ${Math.random() * 800}; 360 ${Math.random() * 800} ${Math.random() * 800}`);
+          });
+        });
+      </script>
+      
+      
+            
   </section>
 
-  <!-- Introduction section -->
   <section id="introduction">
     <div class="container">
       <h2>About</h2>
     </div>
   </section>
 
-  <!-- Filmography section -->
   <section id="filmography">
     <div class="container">
       <h2>Projects</h2>
@@ -55,21 +76,18 @@
     </div>
   </section>
 
-  <!-- VFX section -->
   <section id="impact">
     <div class="container">
       <h2>VFX</h2>
     </div>
   </section>
 
-  <!-- Footer section -->
   <section id="footer">
     <div class="container">
       <p>&copy; Luke Stanton 2024 </p>
     </div>
   </section>
 
-  <!-- JavaScript for smooth scrolling -->
   <script src="jquery.js"></script>
   <script type="text/javascript">
     jQuery(document).ready(function () {
@@ -83,3 +101,4 @@
   </script>
 </body>
 </html>
+
