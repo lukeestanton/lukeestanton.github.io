@@ -2,7 +2,7 @@
     position: relative;
     background-color: #FFFFFF;
     height: 800px;
-    background: url(/Users/lukestanton/Downloads/FramesDonut/0159.png) no-repeat center top fixed;
+    background: url(/path/to/optimized/image.png) no-repeat center top fixed;
     background-size: cover;
     text-align: center;
     overflow: hidden;
@@ -90,12 +90,12 @@
     font-size: 4.4em;
   }
   
-  #title h2 {
-    font-size: 2em;
-    font-style: italic;
-    text-shadow: 3px 3px #000000;
-    text-align: center;
-    border-bottom: none;
+  body {
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-family: 'Oswald', arial, sans-serif; 
+    letter-spacing: 2.2px;
   }
   
   /* Main Styles */
