@@ -24,7 +24,7 @@
   
   /* Section Styles */
   #splash {
-    position: fixed;
+    position: relative;
     background-color: #FFFFFF;
     height: 800px;
     background-size: cover;
