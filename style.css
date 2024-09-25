@@ -164,7 +164,7 @@
 
 /* Apply the animation */
 #title h1 {
-  animation: fadeInUp 2s ease-out;
+  animation: fadeInUp 2s ease-out forwards; /* 'forwards' ensures the final state remains */
   opacity: 0; /* Start hidden */
 }
 
