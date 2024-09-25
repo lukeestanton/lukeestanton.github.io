@@ -32,10 +32,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column; /* Ensure content aligns vertically */
   text-align: center;
   color: #ffffff;
   font-family: 'Bebas Neue', sans-serif;
-  overflow: hidden;
+  overflow: hidden; /* Contain particles within splash */
 }
 
 /* Cool animated gradient background */
@@ -56,6 +57,7 @@
   width: 0;
   animation: typing 3.5s steps(40, end) forwards, blink 0.75s step-end infinite;
   letter-spacing: 4px;
+  margin-bottom: 0; /* Remove space below title */
 }
 
 /* Typing Animation */
@@ -68,13 +70,16 @@
   50% { border-color: transparent; }
 }
 
-/* Subtext under title with scaling effect */
+/* Subtext under title with scaling effect and centered beneath title */
 #subtext {
   font-size: 1.8em;
-  margin-top: 20px;
+  margin-top: 10px; /* Reduce spacing between title and subtext */
   opacity: 0;
   transform: scale(0.9);
   animation: fadeInUpSubtext 1.5s ease-out 4s forwards; /* Fades in after title */
+  position: relative;
+  z-index: 2;
+  max-width: 90%; /* Ensure subtext doesn't extend too far on small screens */
 }
 
 @keyframes fadeInUpSubtext {
@@ -106,6 +111,7 @@
   z-index: 1;
   background: rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  pointer-events: none; /* Make sure particles don't block any interaction */
 }
 
 .particle {
@@ -114,16 +120,17 @@
   height: 10px;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
+  bottom: 0; /* Start particles at the bottom of the screen */
   animation: moveParticle 10s linear infinite;
 }
 
 @keyframes moveParticle {
   from {
-      transform: translateY(0);
+      transform: translateY(100vh); /* Particles start at the bottom of the screen */
       opacity: 0.5;
   }
   to {
-      transform: translateY(-100vh);
+      transform: translateY(-100vh); /* Particles move upwards */
       opacity: 0;
   }
 }
