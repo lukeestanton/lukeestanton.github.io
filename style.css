@@ -150,3 +150,33 @@
     margin-bottom: 10px;
   }
   
+/* Fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation */
+#title h1 {
+  animation: fadeInUp 2s ease-out;
+  opacity: 0; /* Start hidden */
+}
+
+/* Animated gradient background */
+#splash {
+  background: linear-gradient(-45deg, #1A2232, #28344b, #647487, #9C8E7E);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
