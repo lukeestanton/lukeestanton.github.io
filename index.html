@@ -1,4 +1,3 @@
-<!-- Work buddy -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,20 +14,19 @@
   <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body> 
-  <!-- Splash section with title -->
+  <!-- Splash section with title, subtext, particles, and scroll prompt -->
   <section id="splash">
-    <div id="title">
-      <div class="container">
-        <h1>Hi, <br> My Name is Luke. </h1>
-      </div>
-    </div>
+    <div id="particles"></div> <!-- Particle background container -->
+    <div id="title">Hi, I'm Luke.</div>
+    <div id="subtext">Developer, Designer, Creator</div>
+    <div class="scroll-prompt">Scroll Down &#x25BC;</div>
   </section>
 
   <!-- About section -->
   <section id="about">
     <div class="container">
       <h2>About</h2>
-      <p>I'm Luke Stanton, a junior Computer Science major at Florida State University, with a passion for web development, animation using Blender, and creating stunning projects.</p>
+      <p>I'm Luke Stanton, a junior Computer Science major at Florida State University, with a passion for web development, animation using Blender, and creating stunning projects. My goal is to combine my technical skills with creativity to produce unique digital experiences.</p>
     </div>
   </section>
 
@@ -43,20 +41,20 @@
         </div>
         <div class="grid-item">
           <h3>Medical Patient Management System</h3>
-          <p>A C# application that tracks patient demographics, physician schedules, and manages appointments.</p>
+          <p>A C# application that tracks patient demographics, physician schedules, and manages appointments. The application ensures no double-booking of physicians.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact section -->
- <section id="contact">
-  <div class="container">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:les22@fsu.edu">les22@fsu.edu</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/luke-e-stanton/" target="_blank">https://www.linkedin.com/in/luke-e-stanton/</a></p>
-    <p>GitHub: <a href="https://github.com/lukeestanton" target="_blank">https://github.com/lukeestanton</a></p>
-  </div>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:youremail@domain.com">youremail@domain.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+      <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
+    </div>
   </section>
 
   <!-- Footer section -->
@@ -66,25 +64,24 @@
     </div>
   </section>
 
-  <!-- JavaScript for smooth scrolling -->
-  <script src="jquery.js"></script>
-  <script type="text/javascript">
-    jQuery(document).ready(function () {
-      jQuery('.button').click(function() {
-        var targetName = jQuery(this).attr('href');
-        var targetLocation = jQuery(targetName).offset().top;
-        jQuery('html, body').animate({scrollTop:targetLocation}, 'slow');
-        return false;
-      });
-    });
+  <!-- JavaScript for particle generation -->
+  <script>
+    // Create particles for the background
+    const particleContainer = document.getElementById('particles');
 
-    // JavaScript for animation delay
-    window.onload = function() {
-      const title = document.querySelector('#title h1');
-      setTimeout(function() {
-        title.style.opacity = 1;
-      }, 500); // Delay the animation by 500ms
-    };
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = `${Math.random() * 100}vw`;
+      particle.style.animationDuration = `${Math.random() * 5 + 5}s`; // Random duration between 5s and 10s
+      particle.style.width = `${Math.random() * 5 + 5}px`;  // Random size between 5px and 10px
+      particle.style.height = particle.style.width; // Make it round
+      particleContainer.appendChild(particle);
+
+      setTimeout(() => particle.remove(), 10000); // Remove particle after 10s
+    }
+
+    setInterval(createParticle, 300); // Create a new particle every 300ms
   </script>
 </body>
 </html>
