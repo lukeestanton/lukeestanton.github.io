@@ -60,7 +60,7 @@ header {
 /* ===== HERO SECTION ===== */
 .hero {
   height: 80vh;
-  background: url("https://via.placeholder.com/1600x900") no-repeat center center/cover;
+  background: url("Images/IMG_6975.JPG") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,11 +76,11 @@ header {
   left: 0; 
   right: 0; 
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Overlay effect */
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
-  z-index: 1; /* Make sure content is above overlay */
+  z-index: 1;
   max-width: 600px;
   padding: 2rem;
 }
